@@ -21,9 +21,9 @@ namespace Ex_03
             User = user;
         }
 
-        public Acount(int id,string user,double saldo) : this(id,user) 
+        public Acount(int id,string user,double initial_deposit) : this(id,user) 
         {
-            Saldo = saldo;
+            Deposit(initial_deposit);
         }
 
        
@@ -43,7 +43,7 @@ namespace Ex_03
         public override string ToString() {
             return " Usuario:" + User
                 + " Conta:" + Id 
-                + " Saldo:"+ Saldo.ToString("F2",CultureInfo.InvariantCulture);
+                + " Saldo: $"+ Saldo.ToString("F2",CultureInfo.InvariantCulture);
         }
 
     }
