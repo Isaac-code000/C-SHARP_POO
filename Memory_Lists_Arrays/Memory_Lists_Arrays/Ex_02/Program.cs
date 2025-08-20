@@ -29,7 +29,7 @@ namespace Ex_02
 
                 vet[i] = new Product(price, name);
 
-                average += price;
+                average += vet[i].Price;
             }
 
             for (int i = 0; i < quant; i++)
