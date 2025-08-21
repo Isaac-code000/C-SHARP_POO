@@ -27,14 +27,13 @@ namespace Ex_03
 
                 if(rooms[room]!=null)
                 {
-                    Console.WriteLine("Quarto ocupado, informe outro");
+                    Console.WriteLine("Room occupied, please inform another;");
                     i--;
                     continue;
                 }
                 else
                 {
                     rooms[room] = new Rooms(tenant,room); 
-
                 }
 
                 
