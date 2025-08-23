@@ -37,16 +37,18 @@ namespace Ex_02.Entities
             contracts.Remove(contract);
         }
 
-        public void Income(int year, int month)
+        public double Income(int year, int month)
         {
+            double sum=0.0;
+
             foreach(Contract contract in contracts)
             {
                 if (contract.Date.Year == year && contract.Date.Month == month)
                 {
-                    BaseSalary += contract.TotalValue(); // Add the total value of the contract to the base salary
+                    sum += contract.TotalValue(); // Add the total value of the contract to the base salary
                 }
-
             }
+                return BaseSalary +sum; // Return the total income for the specified month
         }
 
         override public string ToString()
@@ -55,7 +57,7 @@ namespace Ex_02.Entities
                 + ", "
                 + Level
                 + ","
-                + BaseSalary.ToString("F2", System.Globalization.CultureInfo.InvariantCulture);
+                ;
         }
     }
     }

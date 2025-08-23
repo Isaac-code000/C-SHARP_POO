@@ -46,9 +46,9 @@ namespace Ex_02
             Console.WriteLine("Informe o ano e o mes para calcular o salario");
             DateTime entered = DateTime.Parse(Console.ReadLine());
 
-            worker.Income(entered.Year, entered.Month);
-
+            
             Console.WriteLine(worker);
+            Console.WriteLine("Income:"+worker.Income(entered.Year, entered.Month));
         }
     }
 }
