@@ -16,11 +16,11 @@ namespace Ex_02.Entities
 
         public Departament Departament { get; set; }
 
-        public List<Contract> contracts { get; set; } = new List<Contract>();
+        public List<Contract> Contracts { get; set; } = new List<Contract>();
 
         public void AddContract(Contract contract)
         {
-            contracts.Add(contract);// Implementation for adding a contract to the worker
+            Contracts.Add(contract);// Implementation for adding a contract to the worker
         }
 
         public Worker(string name, double baseSalary, Level level, Departament departament)
@@ -34,14 +34,14 @@ namespace Ex_02.Entities
         public void RemoveContract(Contract contract)
         {
             // Implementation for removing a contract from the worker
-            contracts.Remove(contract);
+            Contracts.Remove(contract);
         }
 
         public double Income(int year, int month)
         {
             double sum=0.0;
 
-            foreach(Contract contract in contracts)
+            foreach(Contract contract in Contracts)
             {
                 if (contract.Date.Year == year && contract.Date.Month == month)
                 {
