@@ -1,8 +1,4 @@
 ﻿using System;
-
-
-
-using System.Collections.Generic;
 using Ex_03.Entities;
 namespace Ex_03
 {
